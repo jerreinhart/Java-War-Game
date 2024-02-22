@@ -3,13 +3,16 @@ package javaWarGame;
 public class Card {
 	//initialize fields	
 		public String name;
-		public String[] suit = {"Hearts", "Spades", "Diamonds" + "Clubs"};
+		public String suit;
 		int value;
 	//use a constructor to create a card	
-		public Card(String name, int value) {
+		public Card(String suit, String name, int value) {
+			this.suit = suit;
+			this.name = name;
 			this.value = value;
+		}
 			
-			switch (value) {
+			/* switch (value) {
 			case 2 :
 				name = "Two";
 			break;
@@ -52,7 +55,7 @@ public class Card {
 			default :
 				System.out.println("This is not a valid input.");
 			}
-		}
+		} */
 		
 	//create a method that returns the card's full name	
 		public String combineName() {
@@ -73,11 +76,11 @@ public class Card {
 			this.name = name += (" of " + suit);
 		}
 
-		public String[] getSuit() {
+		public String getSuit() {
 			return suit;
 		}
 
-		public void setSuit(String[] suit) {
+		public void setSuit(String suit) {
 			this.suit = suit;
 		}
 

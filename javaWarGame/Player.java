@@ -17,10 +17,26 @@ List<Card> hand = new ArrayList<Card>();
 		System.out.println("Player's Hand: " + hand);
 	}
 	
-	public Card flip(Card card) {
-		return card;
+	public Card flip() {
+		return hand.remove(0);
 	}
 	
+	public List<Card> getHand() {
+		return hand;
+	}
+
+	public void setHand(List<Card> hand) {
+		this.hand = hand;
+	}
+
+	public int getPlayerScore() {
+		return playerScore;
+	}
+
+	public void setPlayerScore(int playerScore) {
+		this.playerScore = playerScore;
+	}
+
 	public void incrementScore() {
 		playerScore += 1;
 	}

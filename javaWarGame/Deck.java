@@ -7,15 +7,15 @@ import java.util.List;
 public class Deck {
 	//initialize fields
 		List<Card> cards = new ArrayList<Card>(52);
-		String[] suits = { "Hearts", "Spades", "Diamonds" + "Clubs" };
-		int[] valueNumbers = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
+		String[] suits = { "Hearts", "Spades", "Diamonds", "Clubs" };
+		String[] valueNumbers = {"Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"};
 
 	//create constructor
 		public Deck() {
 			for (String suit : suits) {
-				int index = 0;
-				for (Integer number : valueNumbers) {
-					cards.add(new Card(suit, number));
+				int index = 2;
+				for (String number : valueNumbers) {
+					cards.add(new Card(suit, number, index));
 					index++;
 				}
 			}
